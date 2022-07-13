@@ -15,6 +15,7 @@ pipeline {
             steps {
                 dir("${script.WORKSPACE}") {
                 sh 'mvn -B -DskipTests clean package'
+                }
             }
         }
     }
