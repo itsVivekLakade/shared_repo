@@ -11,11 +11,14 @@ pipeline {
                 echo "M2_HOME = /opt/maven"
             }
         }
-        stage('Build') {
+        stage ('Compile') {
             steps {
-                dir("${script.WORKSPACE}") {
-                sh 'mvn -B -DskipTests clean package'
-                }
+                sh 'mvn compile'
+            }
+        }
+        stage ('Build') {
+            steps {
+                sh 'mvn clean package'
             }
         }
     }
