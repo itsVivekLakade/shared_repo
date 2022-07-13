@@ -3,6 +3,7 @@ pipeline {
     tools {
         maven "MAVEN"
         jdk "JDK"
+        Script "script"
     }
     stages {
         stage('Initialize'){
