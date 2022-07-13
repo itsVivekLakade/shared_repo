@@ -1,9 +1,9 @@
 pipeline {
     agent any
+    Script script
     tools {
         maven "MAVEN"
         jdk "JDK"
-        Script "script"
     }
     stages {
         stage('Initialize'){
