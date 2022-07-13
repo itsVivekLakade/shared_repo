@@ -13,12 +13,12 @@ pipeline {
         }
         stage ('Compile') {
             steps {
-                bat 'mvn compile'
+                bat '${script.WORKSPACE}/mvn compile'
             }
         }
         stage ('Build') {
             steps {
-                bat 'mvn clean package'
+                bat '${script.WORKSPACE}/mvn clean package'
             }
         }
     }
