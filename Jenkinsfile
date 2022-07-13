@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    Script script
     tools {
         maven "MAVEN"
         jdk "JDK"
@@ -14,12 +13,12 @@ pipeline {
         }
         stage ('Compile') {
             steps {
-                bat '${script.WORKSPACE}/mvn compile'
+                bat 'mvn compile'
             }
         }
         stage ('Build') {
             steps {
-                bat '${script.WORKSPACE}/mvn clean package'
+                bat 'mvn clean package'
             }
         }
     }
