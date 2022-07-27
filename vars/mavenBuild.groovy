@@ -1,6 +1,6 @@
-import com.main.mvnBuild
+import com.test.mvnBuild
 
 def call() {
-    def mvnbuild = new mvnBuild(this)
-    mvnbuild.build()
+	def mvnbuild = new mvnBuild(this)
+	mvnbuild.build()
 }
