@@ -1,4 +1,4 @@
-package com.main
+package main
 
 class MvnBuild implements Serializable {
     def script
