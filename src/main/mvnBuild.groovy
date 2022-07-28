@@ -10,7 +10,7 @@ class mvnBuild implements Serializable {
 
     def clean(){
         script.echo "Inside Clean Function"
-        script.bat "mvn clean"
+        script.bat "mvn clean install"
     }
     def compile(){
         script.echo "Inside Compile Function"
